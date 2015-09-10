@@ -20,7 +20,7 @@ if ((cluster.isMaster) &&
   (process.env.NODE_ENV!=='test') && (process.env.NODE_ENV!=='development') &&
   (process.execArgv.indexOf('--singleProcess')<0)) {
 //if (cluster.isMaster) {
-
+    console.log("Environment "+process.env.NODE_ENV);
     console.log('for real!');
     // Count the machine's CPUs
     var cpuCount = require('os').cpus().length;

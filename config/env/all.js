@@ -18,7 +18,8 @@ module.exports = {
     }
   },
   hostname: process.env.HOST || process.env.HOSTNAME,
-  db: process.env.MONGOHQ_URL,
+ // db: process.env.MONGOHQ_URL,
+  db: 'mongodb://admin:admin@ds053198.mongolab.com:53198/heroku_xlg1x5j2',
   templateEngine: 'swig',
 
   // The secret should be set to a non-guessable string that
