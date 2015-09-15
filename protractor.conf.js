@@ -13,11 +13,13 @@ exports.config = {
     'browserName': 'chrome'
   },
 
-  baseUrl: 'http://dry-brook-8546.herokuapp.com',
+  //baseUrl: 'http://dry-brook-8546.herokuapp.com',
+  baseUrl: 'http://localhost:9000',
 
   // Spec patterns are relative to the current working directly when
   // protractor is called.
-  specs: ['e2e/**/*.js'],
+  /*'e2e/registration.spec.js' ,*/
+  specs: [ 'e2e/registration.spec.js', 'e2e/authentication.spec.js'],
 
   // Options to be passed to Jasmine-node.
   jasmineNodeOpts: {

@@ -33,6 +33,15 @@ angular.module('mean.articles').config(['$stateProvider',
           }
         }
       })
+        .state('delete article', {
+          url: '/articles/:articleId/delete',
+          templateUrl: '/articles/',
+          resolve: {
+            loggedin: function(MeanUser) {
+              return MeanUser.checkLoggedin();
+            }
+          }
+        })
       .state('article by id', {
         url: '/articles/:articleId',
         templateUrl: '/articles/views/view.html',
